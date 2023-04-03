@@ -1,4 +1,4 @@
-import type { SelectData } from "../../pages/Home/data/types"
+import type { SelectData } from "../../../pages/Home/data/types"
 
 interface Props {
   id: string,
@@ -6,7 +6,7 @@ interface Props {
   data: SelectData
 }
 
-const SelectMenu = ({ name, id, data }: Props) => {
+const Select = ({ name, id, data }: Props) => {
   return (
     <select name={name} id={id}>
       {data.map(({ name, value }) => {
@@ -16,4 +16,4 @@ const SelectMenu = ({ name, id, data }: Props) => {
   )
 }
 
-export default SelectMenu
+export default Select

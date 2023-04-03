@@ -1,0 +1,13 @@
+.form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.address {
+  margin-top: 10px;
+}
