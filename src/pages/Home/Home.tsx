@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import styles from "./Home.module.css"
+import SelectMenu from "../../components/SelectMenu/SelectMenu"
+import { states, departments } from "./data"
 
 const Home = () => {
   return (
@@ -33,20 +35,14 @@ const Home = () => {
             <input id="city" type="text" />
 
             <label htmlFor="state">State</label>
-            <select name="state" id="state"></select>
+            <SelectMenu id="state" name="state" data={states} />
 
             <label htmlFor="zip-code">Zip Code</label>
             <input id="zip-code" type="number" />
           </fieldset>
 
           <label htmlFor="department">Department</label>
-          <select name="department" id="department">
-            <option>Sales</option>
-            <option>Marketing</option>
-            <option>Engineering</option>
-            <option>Human Resources</option>
-            <option>Legal</option>
-          </select>
+          <SelectMenu name="department" id="department" data={departments} />
         </form>
 
         <button>Save</button>
