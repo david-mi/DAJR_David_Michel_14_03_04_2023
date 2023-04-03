@@ -1,7 +1,9 @@
-import { useRef } from "react"
+import { useRef, useContext } from "react"
 import SelectMenu from "./Select/Select"
 import styles from "./createEmployee.module.css"
 import type { SelectData } from "../../pages/Home/data/types"
+import type { Employee } from "../../context/EmployeesContext"
+import { EmployeesContext } from "../../context/EmployeesContext"
 
 interface Props {
   states: SelectData
@@ -9,26 +11,23 @@ interface Props {
 }
 
 const CreateEmployee = ({ states, departments }: Props) => {
+  const { setEmployees } = useContext(EmployeesContext)
   const formRef = useRef<HTMLFormElement>(null)
 
   /**
-   * Form submit
+   * Form submission
+   * put new employee in employees state
    */
 
   function handleSubmit(event: React.FormEvent) {
     event.preventDefault()
 
-    const employeesStorage = localStorage.getItem('employees')
-    const employees = employeesStorage
-      ? JSON.parse(employeesStorage)
-      : []
-
     const form = formRef.current!
     const formData = new FormData(form)
-    const formBody = Object.fromEntries(formData)
+    // @ts-ignore
+    const formBody = Object.fromEntries(formData) as Employee
 
-    employees.push(formBody)
-    localStorage.setItem("employees", JSON.stringify(employees))
+    setEmployees((previous) => [...previous, formBody])
   }
 
   return (
