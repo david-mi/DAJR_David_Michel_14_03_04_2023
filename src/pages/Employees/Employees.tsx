@@ -3,11 +3,11 @@ import Title from "../../components/Title/Title"
 
 const Employees = () => {
   return (
-    <div id="employee-div" className="container">
+    <main id="employee-div" className="container">
       <Title title="Current Employees" />
       <table id="employee-table" className="display"></table>
       <Link to="/">Home</Link>
-    </div>
+    </main>
   )
 }
 

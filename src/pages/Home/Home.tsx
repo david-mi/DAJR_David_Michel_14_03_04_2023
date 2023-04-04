@@ -18,7 +18,7 @@ const Home = () => {
   }
 
   return (
-    <div className={styles.container}>
+    <main className={styles.container}>
       <Title title="HRnet" />
       <Link to="/employees">View Current Employees</Link>
       <CreateEmployee
@@ -29,7 +29,7 @@ const Home = () => {
       {showConfirmation && (
         <Confirmation message="Employee Created!" closeModale={closeModale} />
       )}
-    </div>
+    </main>
   )
 }
 
