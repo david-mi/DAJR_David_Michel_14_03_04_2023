@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import headerPropTypes from "./propTypes"
 import styles from "./header.module.css"
-import Title from "../Title/Title"
 import ArrowIcon from "../svg/ArrowIcon/ArrowIcon"
 
 interface Props {
@@ -14,7 +13,6 @@ const Header = ({ logo }: Props) => {
       <Link to="/">
         <img src={logo} alt="HRnet" />
       </Link>
-      <Title title="HRnet" />
       <nav className={styles.nav}>
         <Link to="/employees">
           <ArrowIcon />
