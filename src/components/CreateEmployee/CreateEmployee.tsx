@@ -35,6 +35,16 @@ const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => 
     setShowConfirmation(true)
   }
 
+  /**
+   * Helper function to get today's date as "YYYY-MM-DD"
+   * to put as default value on date inputs
+   */
+
+  function setTodayDateInput(): string {
+    const date = new Date()
+    return date.toISOString().slice(0, 10)
+  }
+
   return (
     <form
       onSubmit={handleSubmit}
@@ -51,10 +61,22 @@ const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => 
       <input type="text" id="lastName" name="lastName" />
 
       <label htmlFor="dateOfBirth">Date of Birth</label>
-      <input type="date" id="dateOfBirth" name="dateOfBirth" required />
+      <input
+        type="date"
+        id="dateOfBirth"
+        name="dateOfBirth"
+        defaultValue={setTodayDateInput()}
+        required
+      />
 
       <label htmlFor="startDate">Start Date</label>
-      <input type="date" id="startDate" name="startDate" required />
+      <input
+        type="date"
+        id="startDate"
+        name="startDate"
+        defaultValue={setTodayDateInput()}
+        required
+      />
 
       <fieldset className={styles.address}>
         <legend>Address</legend>
