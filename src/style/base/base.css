@@ -7,6 +7,6 @@
 body {
   max-width: 1440px;
   margin: auto;
-  --clr-green: rgba(204, 255, 163, 0.26);
-  background-color: var(--clr-green);
+  --clr-bg: rgba(218, 218, 218, 0.336);
+  background-color: var(--clr-bg);
 }
