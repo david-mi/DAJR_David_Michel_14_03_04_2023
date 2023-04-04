@@ -52,13 +52,14 @@
 .modale {
   position: relative;
   font-weight: bold;
-  background-color: white;
-  padding: 20px;
+  background-color: rgb(0, 8, 31);
+  color: white;
+  padding: 3rem;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 200;
   animation: scaleIn var(--tduration) forwards;
-  border: solid #72727275 5px;
+  border: solid #b1b1b1 5px;
   transition: 300ms;
 }
 
