@@ -1,4 +1,5 @@
-import { useRef, useContext } from "react"
+import React, { useRef, useContext } from "react"
+import type { Dispatch, SetStateAction } from "react"
 import SelectMenu from "./Select/Select"
 import styles from "./createEmployee.module.css"
 import type { SelectData } from "../../pages/Home/data/types"
@@ -8,9 +9,10 @@ import { EmployeesContext } from "../../context/EmployeesContext"
 interface Props {
   states: SelectData
   departments: SelectData
+  setShowConfirmation: Dispatch<SetStateAction<boolean>>
 }
 
-const CreateEmployee = ({ states, departments }: Props) => {
+const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => {
   const { setEmployees } = useContext(EmployeesContext)
   const formRef = useRef<HTMLFormElement>(null)
 
@@ -28,6 +30,7 @@ const CreateEmployee = ({ states, departments }: Props) => {
     const formBody = Object.fromEntries(formData) as Employee
 
     setEmployees((previous) => [...previous, formBody])
+    setShowConfirmation(true)
   }
 
   return (

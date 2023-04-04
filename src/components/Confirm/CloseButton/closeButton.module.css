@@ -1,0 +1,28 @@
+.button {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  border: none;
+  top: 0;
+  right: 0;
+  transform: translate(30%, -30%);
+  border-radius: 50%;
+  background-color: black;
+  width: clamp(40px, 2vw, 50px);
+  height: clamp(40px, 2vw, 50px);
+  cursor: pointer;
+  transition: 300ms;
+}
+
+.button:hover {
+  background-color: #93ad18;
+}
+
+.button svg {
+  width: 2em;
+  aspect-ratio: 1/1;
+}
+
+.button svg path {
+  fill: white;
+}

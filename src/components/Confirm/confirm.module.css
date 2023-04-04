@@ -1,0 +1,71 @@
+.container {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 10;
+  --tduration: 500ms;
+  --tbezier: linear;
+  user-select: none;
+}
+
+.background {
+  position: fixed;
+  display: grid;
+  place-items: center;
+  inset: 0;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.541);
+  transition: var(--tduration);
+}
+
+.background.close {
+  opacity: 0;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+@keyframes scaleOut {
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+}
+
+.modale {
+  position: relative;
+  font-weight: bold;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 200;
+  animation: scaleIn var(--tduration) forwards;
+  border: solid #72727275 5px;
+  transition: 300ms;
+}
+
+.modale.close {
+  animation: scaleOut var(--tduration) forwards;
+}
+
+.modale.active {
+  border-color: #93ad18;
+}

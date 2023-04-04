@@ -1,19 +1,31 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
-import styles from "./Home.module.css"
 import { states, departments } from "./data"
 import CreateEmployee from "../../components/CreateEmployee/CreateEmployee"
 import Title from "../../components/Title/Title"
+import Confirmation from "../../components/Confirm/Confirm"
+import styles from "./Home.module.css"
 
 const Home = () => {
+  const [showConfirmation, setShowConfirmation] = useState<boolean>(false)
+
+  function closeModale() {
+    setShowConfirmation(false)
+  }
+
   return (
-    <>
-      <div className={styles.container}>
-        <Title title="HRnet" />
-        <Link to="/employees">View Current Employees</Link>
-        <CreateEmployee states={states} departments={departments} />
-      </div>
-      <div id="confirmation" className={styles.modale}>Employee Created!</div>
-    </>
+    <div className={styles.container}>
+      <Title title="HRnet" />
+      <Link to="/employees">View Current Employees</Link>
+      <CreateEmployee
+        states={states}
+        departments={departments}
+        setShowConfirmation={setShowConfirmation}
+      />
+      {showConfirmation && (
+        <Confirmation message="Employee Created!" closeModale={closeModale} />
+      )}
+    </div>
   )
 }
 
