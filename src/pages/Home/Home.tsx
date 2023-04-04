@@ -9,6 +9,10 @@ import styles from "./Home.module.css"
 const Home = () => {
   const [showConfirmation, setShowConfirmation] = useState<boolean>(false)
 
+  /**
+   * Close confirmation modale
+   */
+
   function closeModale() {
     setShowConfirmation(false)
   }

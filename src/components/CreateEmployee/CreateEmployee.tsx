@@ -9,6 +9,7 @@ import { EmployeesContext } from "../../context/EmployeesContext"
 interface Props {
   states: SelectData
   departments: SelectData
+  /** update state to hide or display confirmation modale */
   setShowConfirmation: Dispatch<SetStateAction<boolean>>
 }
 
