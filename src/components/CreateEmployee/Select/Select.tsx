@@ -1,4 +1,5 @@
 import type { SelectData } from "../../../pages/Home/data/types"
+import SelectPropTypes from "./propTypes"
 
 interface Props {
   id: string,
@@ -15,5 +16,7 @@ const Select = ({ name, id, data }: Props) => {
     </select>
   )
 }
+
+Select.propTypes = SelectPropTypes
 
 export default Select

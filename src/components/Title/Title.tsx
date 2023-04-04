@@ -1,3 +1,4 @@
+import titlePropTypes from "./propTypes"
 import styles from "./title.module.css"
 
 interface Props {
@@ -11,5 +12,7 @@ const Title = ({ title }: Props) => {
     </div>
   )
 }
+
+Title.propTypes = titlePropTypes
 
 export default Title

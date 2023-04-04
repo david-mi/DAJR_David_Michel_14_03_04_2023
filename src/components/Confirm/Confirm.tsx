@@ -1,6 +1,7 @@
 import { useRef, useState } from "react"
 import styles from "./confirm.module.css"
 import CloseButton from "./CloseButton/CloseButton"
+import confirmPropTypes from "./propTypes"
 
 interface Props {
   message: string
@@ -9,7 +10,7 @@ interface Props {
 
 /** Confirmation modale */
 
-const Confirmation = ({ message, closeModale }: Props) => {
+const Confirm = ({ message, closeModale }: Props) => {
   let timeoutId: number | null = null
   const timeoutDelay = 500
 
@@ -61,4 +62,6 @@ const Confirmation = ({ message, closeModale }: Props) => {
   )
 }
 
-export default Confirmation
+Confirm.propTypes = confirmPropTypes
+
+export default Confirm

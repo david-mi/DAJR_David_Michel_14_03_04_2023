@@ -1,4 +1,5 @@
 import CloseIcon from "../../svg/CloseIcon/CloseIcon"
+import closeButtonPropTypes from "./propTypes"
 import styles from "./closeButton.module.css"
 
 interface Props {
@@ -20,5 +21,7 @@ const CloseButton = ({ closeModale, setActive }: Props) => {
     </button>
   )
 }
+
+CloseButton.propTypes = closeButtonPropTypes
 
 export default CloseButton

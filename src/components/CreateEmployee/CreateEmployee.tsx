@@ -1,10 +1,11 @@
 import React, { useRef, useContext } from "react"
 import type { Dispatch, SetStateAction } from "react"
 import SelectMenu from "./Select/Select"
-import styles from "./createEmployee.module.css"
 import type { SelectData } from "../../pages/Home/data/types"
 import type { Employee } from "../../context/EmployeesContext"
 import { EmployeesContext } from "../../context/EmployeesContext"
+import createEmployeePropTypes from "./propTypes"
+import styles from "./createEmployee.module.css"
 
 interface Props {
   states: SelectData
@@ -78,5 +79,7 @@ const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => 
     </form>
   )
 }
+
+CreateEmployee.propTypes = createEmployeePropTypes
 
 export default CreateEmployee
