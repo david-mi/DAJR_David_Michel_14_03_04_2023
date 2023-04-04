@@ -54,29 +54,39 @@ const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => 
     >
       <h2 className={styles.title}>Create Employee</h2>
 
-      <label htmlFor="firstName">First Name</label>
-      <input type="text" id="firstName" name="firstName" required />
+      <div className={styles.identity}>
+        <div>
+          <label htmlFor="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+        <div>
+          <label htmlFor="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" />
+        </div>
+      </div>
 
-      <label htmlFor="lastName">Last Name</label>
-      <input type="text" id="lastName" name="lastName" />
-
-      <label htmlFor="dateOfBirth">Date of Birth</label>
-      <input
-        type="date"
-        id="dateOfBirth"
-        name="dateOfBirth"
-        defaultValue={setTodayDateInput()}
-        required
-      />
-
-      <label htmlFor="startDate">Start Date</label>
-      <input
-        type="date"
-        id="startDate"
-        name="startDate"
-        defaultValue={setTodayDateInput()}
-        required
-      />
+      <div className={styles.dates}>
+        <div>
+          <label htmlFor="dateOfBirth">Date of Birth</label>
+          <input
+            type="date"
+            id="dateOfBirth"
+            name="dateOfBirth"
+            defaultValue={setTodayDateInput()}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="startDate">Start Date</label>
+          <input
+            type="date"
+            id="startDate"
+            name="startDate"
+            defaultValue={setTodayDateInput()}
+            required
+          />
+        </div>
+      </div>
 
       <fieldset className={styles.address}>
         <legend>Address</legend>
