@@ -4,6 +4,9 @@
   font-family: 'Roboto', sans-serif;
 }
 
-main {
-  min-height: 100vh;
+body {
+  max-width: 1440px;
+  margin: auto;
+  --clr-green: rgba(204, 255, 163, 0.26);
+  background-color: var(--clr-green);
 }

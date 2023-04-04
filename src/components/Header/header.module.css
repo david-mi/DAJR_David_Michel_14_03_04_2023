@@ -1,0 +1,39 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding-inline: clamp(0.5rem, 3vw, 2rem);
+  padding-block: clamp(0.5rem, 2vw, 1rem);
+  background-color: white;
+}
+
+
+.header img {
+  max-height: 100px;
+  height: clamp(50px, 8vw, 70px);
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 8, 31);
+  color: white;
+  height: 3rem;
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+  transition: 300ms;
+}
+
+.nav a:hover {
+  background-color: #93ad18;
+}
+
+.nav a svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+}
