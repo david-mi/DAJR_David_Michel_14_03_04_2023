@@ -1,15 +1,16 @@
 import type { ReactNode, Dispatch, SetStateAction } from "react";
 import { createContext, useState } from "react";
+import generateEmployees from "employees-generator"
 
 export interface Employee {
   firstName: string
   lastName: string
-  dateOfBirth: string
+  birthDate: string
   startDate: string
   street: string
   city: string
   state: string
-  zipCode: string
+  zipCode: number
   department: string
 }
 
@@ -17,6 +18,8 @@ interface Employees {
   employees: Employee[],
   setEmployees: Dispatch<SetStateAction<Employee[]>>
 }
+
+const generatedEmployees = generateEmployees<Employee>({ amount: 1000 })
 
 export const EmployeesContext = createContext<Employees>({
   employees: [],
@@ -28,7 +31,7 @@ interface Props {
 }
 
 const EmployeesProvider = ({ children }: Props) => {
-  const [employees, setEmployees] = useState<Employee[]>([])
+  const [employees, setEmployees] = useState<Employee[]>(generatedEmployees)
 
   return (
     <EmployeesContext.Provider value={{ employees, setEmployees }}>

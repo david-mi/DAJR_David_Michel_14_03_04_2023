@@ -31,7 +31,7 @@ const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => 
     // @ts-ignore
     const formBody = Object.fromEntries(formData) as Employee
 
-    setEmployees((previous) => [...previous, formBody])
+    setEmployees((previous) => [formBody, ...previous])
     setShowConfirmation(true)
   }
 
@@ -67,11 +67,11 @@ const CreateEmployee = ({ states, departments, setShowConfirmation }: Props) => 
 
       <div className={styles.dates}>
         <div>
-          <label htmlFor="dateOfBirth">Date of Birth</label>
+          <label htmlFor="birthDate">Date of Birth</label>
           <input
             type="date"
-            id="dateOfBirth"
-            name="dateOfBirth"
+            id="birthDate"
+            name="birthDate"
             defaultValue={setTodayDateInput()}
             required
           />

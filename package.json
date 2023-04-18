@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "david-mi-react-table": "^2.0.0",
+    "employees-generator": "^1.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
