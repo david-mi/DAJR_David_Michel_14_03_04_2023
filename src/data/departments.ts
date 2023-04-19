@@ -1,6 +1,4 @@
-import type { SelectData } from "./types"
-
-const departments: SelectData = [
+const departments = [
   { name: "Sales" },
   { name: "Marketing" },
   { name: "Engineering" },

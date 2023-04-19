@@ -1,0 +1,32 @@
+.error {
+  position: relative;
+  overflow: hidden;
+  transition: 500ms;
+}
+
+.error.visible :is(input, select) {
+  font-size: 0.65rem;
+  padding-top: 0.7rem;
+  border-color: red;
+  transition: padding-top 400ms;
+  transition: font-size 400ms;
+}
+
+.error.visible :is(input, select):focus {
+  outline-color: red;
+}
+
+.error p {
+  transition: 400ms;
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: red;
+  top: 5px;
+  left: 0.7rem;
+  transform: translateY(-3rem)
+}
+
+.error.visible p {
+  transform: translateY(0);
+}

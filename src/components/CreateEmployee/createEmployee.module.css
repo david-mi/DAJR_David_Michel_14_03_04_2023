@@ -25,9 +25,10 @@
   border: var(--border);
   border-radius: 3px;
   font-size: 1.05rem;
-  padding: 0.5rem 0.7rem;
+  padding-inline: 0.7rem;
   width: 100%;
-  transition: 300ms;
+  transition: background-color 300ms;
+  height: 40px;
 }
 
 .form :is(input, select, button):hover {
