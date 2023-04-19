@@ -6,10 +6,18 @@
   background-color: white;
 }
 
+.rotateRight {
+  rotate: 90deg;
+}
+
+.rotateLeft {
+  rotate: -90deg;
+}
 
 .header img {
   max-height: 100px;
   height: clamp(50px, 8vw, 70px);
+  transition: 600ms cubic-bezier(.17, .67, .31, 1.23);
 }
 
 .nav {
@@ -28,6 +36,7 @@
   transition: 300ms;
 }
 
+
 .nav a:hover {
   background-color: #93ad18;
 }
@@ -36,4 +45,13 @@
   width: 20px;
   height: 20px;
   margin-right: 0.5rem;
+  transition: 600ms cubic-bezier(.17, .67, .31, 1.23);
+}
+
+.employeesLink svg {
+  rotate: 0deg;
+}
+
+.homeLink svg {
+  rotate: -180deg;
 }

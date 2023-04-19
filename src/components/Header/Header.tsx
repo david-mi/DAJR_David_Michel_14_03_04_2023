@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import headerPropTypes from "./propTypes"
 import styles from "./header.module.css"
 import ArrowIcon from "../svg/ArrowIcon/ArrowIcon"
@@ -8,15 +8,34 @@ interface Props {
 }
 
 const Header = ({ logo }: Props) => {
+  const { pathname } = useLocation()
+
+  const navOptions = {
+    "/employees": {
+      navTitle: "Home",
+      navLink: "/",
+      linkClassName: styles.homeLink,
+      logoClassName: styles.rotateRight,
+    },
+    "/": {
+      navTitle: "Employees",
+      navLink: "/employees",
+      linkClassName: styles.employeesLink,
+      logoClassName: styles.rotateLeft,
+    },
+  }
+
+  const { navTitle, navLink, linkClassName, logoClassName } = navOptions[pathname as "/employees" | "/"]
+
   return (
     <header className={styles.header}>
       <Link to="/">
-        <img src={logo} alt="HRnet" />
+        <img src={logo} className={logoClassName} alt="HRnet" />
       </Link>
       <nav className={styles.nav}>
-        <Link to="/employees">
+        <Link to={navLink} className={linkClassName}>
           <ArrowIcon />
-          <span>Employees</span>
+          <span>{navTitle}</span>
         </Link>
       </nav>
     </header>
