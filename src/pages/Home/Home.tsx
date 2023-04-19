@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { states, departments } from "./data"
+import { states, departments } from "../../data"
 import CreateEmployee from "../../components/CreateEmployee/CreateEmployee"
 import Confirmation from "../../components/Confirm/Confirm"
 import styles from "./Home.module.css"

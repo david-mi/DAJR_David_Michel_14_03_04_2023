@@ -1,7 +1,7 @@
 import React, { useRef, useContext } from "react"
 import type { Dispatch, SetStateAction } from "react"
 import SelectMenu from "./Select/Select"
-import type { SelectData } from "../../pages/Home/data/types"
+import type { SelectData } from "../../data/types"
 import type { Employee } from "../../context/EmployeesContext"
 import { EmployeesContext } from "../../context/EmployeesContext"
 import createEmployeePropTypes from "./propTypes"

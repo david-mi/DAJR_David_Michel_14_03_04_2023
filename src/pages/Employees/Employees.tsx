@@ -3,7 +3,7 @@ import { EmployeesContext } from "../../context/EmployeesContext"
 import type { Employee } from "../../context/EmployeesContext"
 import Title from "../../components/Title/Title"
 import { Table } from "david-mi-react-table"
-import { columns } from "../../data/columns"
+import { columns } from "../../data/"
 import styles from "./employees.module.css"
 
 const Employees = () => {

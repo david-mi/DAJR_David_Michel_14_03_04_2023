@@ -1,4 +1,4 @@
-import type { SelectData } from "../../../pages/Home/data/types"
+import type { SelectData } from "../../../data/types"
 import SelectPropTypes from "./propTypes"
 
 interface Props {

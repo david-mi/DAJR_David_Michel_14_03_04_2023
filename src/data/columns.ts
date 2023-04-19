@@ -6,7 +6,7 @@ export interface Column<T> {
   accessor: T;
 }
 
-export const columns: Column<keyof Employee>[] = [
+const columns: Column<keyof Employee>[] = [
   {
     title: "First Name",
     accessor: "firstName"
@@ -44,3 +44,5 @@ export const columns: Column<keyof Employee>[] = [
     accessor: "zipCode"
   }
 ]
+
+export default columns
