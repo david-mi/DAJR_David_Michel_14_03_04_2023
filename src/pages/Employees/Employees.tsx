@@ -21,6 +21,7 @@ const Employees = () => {
           navigation: styles.navigation,
           search: styles.search,
           select: styles.select,
+          tableContainer: styles.tableContainer,
           table: styles.table
         }}
       />

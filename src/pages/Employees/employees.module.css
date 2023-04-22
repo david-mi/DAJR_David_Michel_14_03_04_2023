@@ -52,10 +52,15 @@
   padding: 5px;
 }
 
-.table {
+.tableContainer {
+  overflow-x: auto;
   grid-area: table;
+}
+
+.table {
   border: 1px solid black;
   border-collapse: collapse;
+  width: 100%;
 }
 
 .table :is(tr, td, th) {
@@ -73,7 +78,31 @@
   transition: 100ms;
 }
 
-table td {
+.table th div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.table th div:first-child div {
+  font-size: 0.8rem;
+
+}
+
+.table th div:first-child p {
+  white-space: nowrap;
+}
+
+.table th [data-active] {
+  color: rgba(228, 228, 228, 0.452);
+}
+
+.table th [data-active='true'] {
+  color: white;
+}
+
+.table td {
   transition: 100ms;
 }
 
@@ -124,9 +153,26 @@ table td {
 }
 
 .navigation span {
+  display: flex;
+  gap: 1rem;
+}
+
+.navigation span span {
+  align-self: flex-end;
+  font-size: 1.2rem;
+}
+
+.navigation span button {
   align-self: center;
+  height: 100%;
+  width: fit-content;
+  padding-inline: 1rem;
+}
+
+.navigation span button[data-current="true"] {
+  background-color: #93ad18;
 }
 
 .navigation button:hover {
-  background-color: #93ad18;
+  background-color: rgba(0, 8, 31, 0.836);
 }
