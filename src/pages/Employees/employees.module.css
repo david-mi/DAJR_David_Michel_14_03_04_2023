@@ -152,6 +152,11 @@
   border-radius: 0.3rem;
 }
 
+.navigation button:disabled {
+  pointer-events: none;
+  background-color: rgb(146, 146, 146);
+}
+
 .navigation span {
   display: flex;
   gap: 1rem;

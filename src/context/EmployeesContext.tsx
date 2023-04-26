@@ -19,7 +19,7 @@ interface Employees {
   setEmployees: Dispatch<SetStateAction<Employee[]>>
 }
 
-const generatedEmployees = generateEmployees<Employee>({ amount: 1000 })
+const generatedEmployees = generateEmployees<Employee>({ amount: 10_000 })
 
 export const EmployeesContext = createContext<Employees>({
   employees: [],
