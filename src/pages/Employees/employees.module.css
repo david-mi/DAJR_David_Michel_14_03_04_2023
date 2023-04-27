@@ -139,6 +139,10 @@
   height: 2.5rem;
 }
 
+.navigation label {
+  align-self: center;
+}
+
 .navigation input {
   max-width: 5rem;
   text-align: center;
