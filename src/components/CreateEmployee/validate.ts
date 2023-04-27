@@ -45,7 +45,6 @@ function handleDate(date: string, property: string): string {
 
 function handleStreet(street: string): string {
   const streetRegex = /^[a-zÀ-ö\d]{1}[a-zÀ-ö\d -.]*[a-zA-ZÀ-ö]{1}$/i
-  console.log({ street })
   if (streetRegex.test(street) === false) {
     throw { street: true }
   }
@@ -55,7 +54,6 @@ function handleStreet(street: string): string {
 
 function handleCity(city: string): string {
   const cityRegex = /^[a-zÀ-ö]{1}[a-zÀ-ö -.]*[a-zA-ZÀ-ö]{1}$/i
-  console.log({ city })
   if (cityRegex.test(city) === false) {
     throw { city: true }
   }
