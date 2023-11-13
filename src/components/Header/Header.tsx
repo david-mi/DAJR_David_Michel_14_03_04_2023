@@ -30,7 +30,13 @@ const Header = ({ logo }: Props) => {
   return (
     <header className={styles.header}>
       <Link to="/">
-        <img src={logo} className={logoClassName} alt="HRnet" />
+        <img
+          width={300}
+          height={276}
+          src={logo}
+          className={logoClassName}
+          alt="HRnet"
+        />
       </Link>
       <nav className={styles.nav}>
         <Link to={navLink} className={linkClassName}>

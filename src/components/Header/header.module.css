@@ -17,6 +17,7 @@
 .header img {
   max-height: 100px;
   height: clamp(50px, 8vw, 70px);
+  width: 100%;
   transition: 600ms cubic-bezier(.17, .67, .31, 1.23);
 }
 

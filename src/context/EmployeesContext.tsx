@@ -1,6 +1,6 @@
 import type { ReactNode, Dispatch, SetStateAction } from "react";
 import { createContext, useState } from "react";
-import generateEmployees from "employees-generator"
+import { generatedEmployees } from "../__mocks__/employees";
 
 export interface Employee {
   firstName: string
@@ -18,8 +18,6 @@ interface Employees {
   employees: Employee[],
   setEmployees: Dispatch<SetStateAction<Employee[]>>
 }
-
-const generatedEmployees = generateEmployees<Employee>({ amount: 50 })
 
 export const EmployeesContext = createContext<Employees>({
   employees: [],
