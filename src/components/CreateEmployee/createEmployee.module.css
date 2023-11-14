@@ -5,7 +5,7 @@
   max-width: 500px;
   width: 100%;
   background-color: white;
-  padding: clamp(0.8rem, 2vw, 3rem);
+  padding: clamp(0.8rem, 2vw, 1.5rem);
   flex: 1;
   margin: auto;
   display: flex;
@@ -80,7 +80,7 @@
 
 .title {
   text-align: center;
-  margin-block: clamp(1rem, 2vw, 2rem);
+  margin-block: clamp(1rem, 2vw, 1.5rem);
 }
 
 .address {
